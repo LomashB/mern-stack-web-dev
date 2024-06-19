@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in CSS</title>
+    <style>
+        /* element selector */
+        div{
+            color: black;
+            /* background-color: red; */
+        }
+        /* class selector */
+        .red{
+            background-color: red;
+        }
+        #green{
+            background-color: green;
+        }
+        /* child selector */
+        div>p{
+            color: aliceblue;
+            background-color: blue;
+        }
+        /* descendant selector */
+        div p{
+            color: blue;
+            background-color: white;
+        }
+        /* universal selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* psuedo selector */
+        a:visited{
+            color: yellow;
+        }
+        a:link{
+            color: green;
+        }
+        a:active{
+            background-color: red;
+        }
+        a:hover{
+            background-color: yellow;
+        }
+        p:first-child{
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="red">
+        i am a div
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, voluptates!    </p>
+    </div>
+
+    <div id="green">
+        i am 2nd div
+        <a href="">
+            <p>hello</p>
+        </a>
+    </div>
+
+    <a href="https://google2.com">Go to Google</a>
+    <a href="https://facebook2.com">go to facebook</a>
+
+    <main>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum dolor.</p>
+    </main>
+</body>
+</html>
