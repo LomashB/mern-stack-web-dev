@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Color Website in HTML CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root{
+            --main-color: darkblue;
+            --main-text-color: wheat;
+            --sec-color: maroon;
+            --sec-text-color: lightyellow;
+            --decoration-color: lightblue; 
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', 'Times New Roman', Times, serif;
+        }
+
+        nav{
+            background-color: var(--main-color);
+            color: var(--main-text-color);
+            padding-inline: 40px;
+            padding-block: 10px;
+            font-size: 1.5rem;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav ul li{
+            cursor: pointer; 
+            padding: 5px;
+        }
+        nav ul li:hover{
+            background-color: var(--main-text-color);
+            color: var(--main-color);
+            border-radius: 20px;
+        }
+        .spacer{
+            width: 100vw;
+            height: 20px;
+            background-color: var(--sec-color);
+        }
+        h3{
+            font-weight: 700;
+            background-color: var(--sec-color);
+            color: var(--sec-text-color);
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        .text{
+            background-color: var(--sec-text-color);
+            color: var(--sec-color);
+            padding-inline: 10%;
+            padding-block: 15%;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="spacer"></div>
+        <h3>
+            Hello, Guys!
+        </h3>
+        <div class="spacer"></div>
+        <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, corporis quod cum nihil sapiente accusamus, id numquam ratione temporibus itaque est suscipit iure maxime incidunt doloremque sequi sunt expedita? Dicta adipisci sapiente aut accusantium illum sunt est quas. Accusamus mollitia dolore illum, nesciunt vitae, fugiat vero ea magnam eveniet doloribus harum, repellendus non aut?
+        </div>
+    </main>
+</body>
+</html>    

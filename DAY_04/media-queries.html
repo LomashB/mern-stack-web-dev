@@ -5,10 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Queries in CSS</title>
     <style>
-        
+        body{
+            background-color: chocolate;
+            color: aliceblue;
+            display: flex;
+            margin: auto;
+            
+        }
+        @media only screen and (max-width: 455px) {
+                /* @media not|only mediatype and (expression){
+                css code} min-width & max-width */
+                body{
+                    background-color: darkblue;
+                }
+                .boxes{
+                    flex-direction: column;
+                }
+            }
+
+        @media screen and (orientation:landscape) {
+            body{
+                border: 5px solid purple;
+            }
+        }
+
+            .boxes{
+                display: flex;
+            }
+
+
+
+            .box{
+                width: 144px;
+                height: 144px;
+                background-color: lightsalmon;
+                margin: 10px;
+                padding: 10px;
+            }
+
     </style>
 </head>
 <body>
-    
-</body>
+    <div>
+
+        <p>
+            Hey i am a red body.
+        </p>
+        <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    </body>
 </html>
