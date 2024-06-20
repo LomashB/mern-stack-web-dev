@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists in CSS</title>
+    <style>
+        .devnagari li{
+            list-style: devanagari;
+            /* list-style-type: ""; */
+            list-style-position: inside;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        ol{
+            background-color: blue;
+            border: 2px solid black;
+            list-style-image: url(..//DAY_01/assets/indian-railways-finalizing-plans-for-aluminium-vande-bharat-train-sets.webp);
+            list-style: disc inside url(../DAY_02/Assets/img.svg) ;
+        }
+        nav ul li{
+            list-style: none;
+            padding: 23px;
+        }
+        nav ul{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <ol>
+        <li>item one</li>
+        <li>item two</li>
+        <li>item three</li>
+        <li>item four</li>
+        <li>item five</li>
+    </ol>
+    <ul class="devnagari">
+        <li>item one</li>
+        <li>item two</li>
+        <li>item three</li>
+        <li>item four</li>
+        <li>item five</li>
+    </ul>
+</body>
+</html>

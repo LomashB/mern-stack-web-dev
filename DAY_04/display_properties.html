@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties in CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            display: inline-block;
+            padding: 45px;
+            margin: 45px;
+            width: 300px;
+        }
+        /* if inline padding and margin top and width not used */
+        /* hence use inline-block */
+        .new-box{
+            /* display: none; */
+            /* margin padding also removed */
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid red;
+            visibility: hidden;
+            /* keeps space intact */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        i am a box
+    </div>
+    <div class="box">
+        also a nice box
+    </div>
+    <span class="new-box">
+        i am good box.
+    </span>
+</body>
+</html>
