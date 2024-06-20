@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions in CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 133px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black;
+        }
+
+        /* bydefault position static */
+        .box1 {
+            background-color: chocolate;
+            position: relative;
+            z-index: 1;
+        }
+
+        .box2 {
+            background-color: aquamarine;
+            position: relative;
+            bottom: 60px;
+            left: 34px;
+            z-index: 12;
+        }
+
+        .box3 {
+            background-color: brown;
+        }
+
+        .box4 {
+            background-color: darkcyan;
+            position: absolute;
+            top: 4px;
+            left: 0px;
+            /* related to nearest positioned ancestor */
+        }
+
+        .parent {
+            margin: 43px;
+            padding: 34px;
+            border: 2px solid darkred;
+            position: relative;
+            /* exception */
+            /* transform filter and perspective properties can also make an element appear as positioned.  */
+            /* transform: translate(0); */
+            /* filter: invert(); */
+            /* perspective: 0m; */
+        }
+
+
+        .box5 {
+            position: fixed;
+            bottom: 0px;
+            background-color: crimson;
+            right: 100px;
+            left: 100px;
+            height: 50px !important;
+        }
+
+        .box6 {
+            position: sticky;
+            top: 0px;
+            background-color: red;
+            height: 100px !important;
+            width: 97vw !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box8{
+            background-color: darkgoldenrod;
+            position: absolute;
+            width: 50px !important;
+            bottom: 4px;
+            right:  20px;
+           /* related to nearest positioned ancestor */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box1 box">relative 1</div>
+        <div class="box2 box">relative z-index 12</div>
+        <div class="box3 box"></div>
+        <div class="box4 box">absolute & parent positioned</div>
+    </div>
+    <div class="box"></div>
+    <div class="box5 box">fixed</div>
+    <div class="box6 box">sticky</div>
+    <div class="box7 box"></div>
+    <div class="box8 box">absolute & parent not positioned</div>
+    
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+</body>
+
+</html>

@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overflow in CSS</title>
+    <style>
+        .box{
+            width: 30vw;
+            height: 30vh;
+            border: 2px solid black;
+            overflow: auto;
+            /* overflow: scroll; */
+            /* white-space: nowrap; */
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            /* overflow: auto  hidden; */
+            /* overflow x y */
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="box">
+        I am a good boy and i love Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel inventore commodi magnam, fuga, officia assumenda voluptas beatae accusamus ipsam sunt nisi rem nam alias nostrum optio, impedit quidem consequatur mollitia deserunt. Assumenda eaque dolorem minima, adipisci, repellendus unde eos, ut doloremque expedita nostrum fugiat saepe ex praesentium quidem magnam aperiam? Voluptas hic deserunt neque sapiente nam.
+    </div>
 </body>
 </html>
