@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid in CSS</title>
+    <style>
+         .container{
+            border: 2px solid red;
+            display: grid;
+            width: 80vw;
+            /* grid-template-columns: 120px 100px; */
+            /* grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* grid-template-columns: repeat(4,1fr); */
+            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+            grid-template-columns: [first]120px [second]100px [third]150px; 
+            grid-template-rows: [first]100px [second]100px [third]100px;
+            gap: 12px 24px;
+            /* row-gap: 12px; */
+            /* column-gap: 24px; */
+
+            align-items: center;
+            justify-items: center;
+
+            /* used when container is big and for whole grid */
+            justify-content: center;
+
+            /*  */
+            place-content: center;
+        }
+        .item{
+            border: 2px solid black;
+            height: 55px;
+            width: 55px;
+        }
+        .item4{
+            grid-row: 1/2;
+            /* grid-row: first/second;*/
+            grid-column: 1/2;
+            /* grid-row-start: 1;
+            grid-row-end: 2; */
+            
+        }
+        .item1{
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        .item3{
+            /* within cell */
+            align-self: start;
+            justify-self: end;  
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+    </div>
+</body>
+</html>
