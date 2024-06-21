@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Exercise</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', 'Times New Roman', Times, serif;
+        }
+        
+        body{
+            background-color: beige;
+        }
+        nav{
+            position: sticky;
+            top: 0px;
+        }
+
+        nav ul{
+            
+            display: flex;            
+            padding: 10px;
+            background-color: lightgray;
+            list-style: none;
+            justify-content: space-evenly;
+            font-weight: 800;
+        }
+        nav ul li{
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        nav ul li:hover{
+            text-decoration: underline;
+            background-color: brown;
+            color: aliceblue;
+            border-radius: 5px;
+        }
+        .sections-class{
+            display: flex;
+            background-color: azure;
+            
+        }
+        .section{
+            width: 40vw;
+            height: 65vh;
+            border: 5px solid lightgrey;
+            margin: 100px auto;
+            border-radius: 10px;
+        }
+        .section:first-child{
+            background-color: cornsilk;
+        }
+        .section:last-child{
+            background-color: darkkhaki;
+        }
+        .fixed-logo{
+            border-radius: 50%;
+            overflow: hidden;
+            width: 50px;
+            height: 50px;
+            border: 2px solid green;
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+        }
+        .fixed-logo img{
+            width: 50px;
+            height: 50px;
+        }
+        .text-section{
+            background-color: rgba(95, 158, 160, 0.562);
+            width: 70%;
+            margin: 70px auto;
+            padding: 20px 40px;
+            font-size: 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        footer{
+            text-align: center;
+            color: black;
+            background-color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="sections-class">
+        <div class="section"></div>
+        <div class="section"></div>
+    </div>
+    <div class="text-section">
+        hello, Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem,t consectetur adipisicing.
+    </div>
+    <div class="fixed-logo"><img src="https://png.pngtree.com/element_our/md/20180626/md_5b321c98efaa6.jpg" alt=""></div>
+    <footer>
+        LB &copy; 2024 | All rights reserved. 
+    </footer>
+</body>
+</html>

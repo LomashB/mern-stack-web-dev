@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors in CSS</title>
+    <style> 
+    .box:first-child{
+        background-color: red;
+    }
+    .box:first-child:first-line{
+        color: yellow;
+    }
+    .boxes *{
+        color: darkblue;
+        border: 2px solid blue;
+    }
+    [data-color="primary"]{
+        margin-top: 100px;
+        padding-top: 10px;
+    }
+    .box, div, [data-color="primary"]{
+        text-decoration: underline;
+    }
+    .box:nth-child(even){
+        background-color: blue;
+    }
+    .box:nth-last-child(1){
+        background-color: gray;
+    }
+    .boxes::before{
+        content: "Lomash is good";
+        color: maroon;
+    }
+    .boxes::after{
+        content: "Everyone is good.";
+        color: blueviolet;
+    }
+    ::selection{
+        background-color: maroon;
+        color: blanchedalmond;
+    }
+    .box::first-letter{
+        color: peru;
+        background-color: greenyellow;
+        font-size: 21px;
+    }
+    input::placeholder{
+        font-size: 12px;
+        color: goldenrod;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">Hey I am a box. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, architecto unde corporis ad maxime illum. Natus ut qui velit quo odio saepe culpa similique est architecto repellat. Officia nostrum ex officiis culpa ipsum, voluptatum veniam nisi nihil quos unde est error consectetur itaque, eveniet ea voluptate enim dolorem dignissimos nobis porro vero odit! Nam minima soluta placeat, vitae sunt maiores voluptas assumenda quos. Voluptates sequi libero ut omnis vitae distinctio aspernatur, quibusdam, exercitationem harum nobis nesciunt, hic assumenda in. Soluta cumque obcaecati explicabo veniam iure, aliquam unde nostrum. Modi, dolorem cumque? At accusamus necessitatibus repudiandae, sit tenetur nobis consequatur assumenda repellat, vel commodi rerum? Doloremque recusandae incidunt, eligendi repellendus officiis alias. </div>
+        <div class="box" data-color="primary">Hey I am a box.</div>
+        <div class="box">Hey I am a box.</div>
+    </div>
+    <input type="text" placeholder="helllo!!">
+</body>
+</html>
