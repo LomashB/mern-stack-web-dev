@@ -6,12 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Object Fit & Cover in CSS</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 466px;
+            height: 488px;
+            border: 2px solid black;
+            background-color: aquamarine;
+            box-sizing: border-box;
+        }
+        img{
+            width: 462px;
+            height: 484px;
+            /* object-fit: fill; */
+            object-fit: cover;
+            object-position: left bottom;
+            object-position: 50% 50% ;
+        }
+        .bg-cont1{
+            width: 466px;
+            height: 488px;
+            margin: 20px;
+            border: 2px solid black;
+            background: url(https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg);
+            background-position: center center;
+        }
+        .bg-cont2{
+            width: 466px;
+            height: 488px;
+            margin: 20px;
+            border: 2px solid black;
+            background: url(https://picsum.photos/200/300);
+            background-position: center center;
+            /* background-clip: border-box; */
+            background-repeat: no-repeat;
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+
+        }
 
     </style>
 </head>
 
 <body>
-
+    <div class="container">
+        <img src="https://picsum.photos/800/400" alt="">
+    </div>
+    <div class="bg-cont1"></div>
+    <div class="bg-cont2"></div>
 </body>
 
 </html>

@@ -6,12 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bounce Anmiation Exercise in CSS</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
+        .container {
+            width: 80vw;
+            height: 80vh;
+            position: absolute;
+            background-color: darkblue;
+        }
+
+        .box {
+            height: 121px;
+            width: 121px;
+            background-color: darkred;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: x-motion 3s linear 0s infinite,
+                y-motion 1s ease-out 0s infinite alternate;
+
+        }
+
+
+
+
+        @keyframes x-motion {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes y-motion {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
-    
+    <div class="container">
+        <div class="box"></div>
+    </div>
 </body>
 
 </html>

@@ -6,12 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filters in CSS</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .img1 {
+            filter: blur(7px);
+        }
+
+        .img2 {
+            filter: brightness(200%);
+        }
+
+        .img3 {
+            filter: contrast(200%);
+        }
+
+        .img4 {
+            filter: grayscale(20%);
+        }
+
+        .img5 {
+            filter: grayscale(100%);
+
+        }
+
+        .img6 {
+            filter: sepia(100%);
+        }
+
+        .img7 {
+            filter: hue-rotate(100%);
+        }
+
+        .img8 {
+            filter: drop-shadow(100%);
+        }
+
+        .img9 {
+            filter: invert(1);
+        }
+
+        .img10 {
+            filter: invert(0.5);
+
+        }
+
+        .img11 {
+            filter: opacity(0.7);
+        }
     </style>
 </head>
 
 <body>
-
+    <div class="container">
+        <img class="img1" src="https://picsum.photos/300/400" alt="">
+        <img class="img2" src="https://picsum.photos/300/400" alt="">
+        <img class="img3" src="https://picsum.photos/300/400" alt="">
+        <img class="img4" src="https://picsum.photos/300/400" alt="">
+        <img class="img5" src="https://picsum.photos/300/400" alt="">
+        <img class="img6" src="https://picsum.photos/300/400" alt="">
+        <img class="img7" src="https://picsum.photos/300/400" alt="">
+        <img class="img8" src="https://picsum.photos/300/400" alt="">
+        <img class="img9" src="https://picsum.photos/300/400" alt="">
+        <img class="img10" src="https://picsum.photos/300/400" alt="">
+        <img class="img11" src="https://picsum.photos/300/400" alt="">
+    </div>
 </body>
 
 </html>
