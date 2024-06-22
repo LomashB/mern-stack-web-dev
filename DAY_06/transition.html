@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition in CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: brown;
+            width: 50vw;
+            height: 40vh;
+        }   
+        .box{
+            background-color: cornsilk;
+            width: 20vw;
+            height: 15vh;
+
+             /* transition-property: transform; */
+            /* transition-property:all;
+            transition-duration: 3s;
+            transition-timing-function: ;
+            transition-delay: 1s;  */
+
+            transition: all 3s cubic-bezier(0.7,-0.7, 0, 1.45) 1s;
+
+
+        }
+        .traslate{
+            transform: translateX(20%) translateY(20%) scale(2);
+            background-color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box traslate">
+
+        </div>
+    </div>
+</body>
+
+</html>

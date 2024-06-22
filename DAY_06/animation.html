@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation in CSS</title>
+    <style>
+        .container{
+            background-color: maroon;
+            height: 80vh;
+            width: 80vh;
+        }
+        .box{
+            background-color: wheat;
+            height: 100px;
+            width: 100px;
+            /* animation: myanimation duration timing-function delay iteration-count direction fill-mode; */
+            /* animation-name: myanimation;
+            animation-duration: 2s;
+            animation-iteration-count: 12; */
+            /* animation-timing-function: cubic-bezier(0.63, 0.08, 0.63, 1.24); */
+            /* animation-direction: alternate-reverse; */
+            /* animation-play-state: paused; */
+
+            animation: myanimation 2s ease-in-out 1s infinite alternate-reverse backwards,
+            newanimation 2s ease-in-out 1s infinite alternate-reverse;
+        }
+        @keyframes myanimation{
+            from{
+                background-color: red;
+            }
+            to{
+                /* transform: translateX(100px); */
+                background-color: yellow;
+            }
+        }
+        @keyframes newanimation {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            40%{
+                transform: rotate(220deg);
+
+            }
+            60%{
+                transform: rotate(250deg);
+
+            }
+            100%{
+                transform: rotate(300deg);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
