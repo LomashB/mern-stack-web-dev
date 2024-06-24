@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -32,13 +32,13 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 80vw;
+  max-width: 70vw;
   margin: 0px auto;
-  height: 65px;
+  padding: 10px;
 }
 
 nav img {
-  width: 115px;
+  width: 155px;
   position: relative;
   z-index: 11;
 }
@@ -47,10 +47,9 @@ nav button {
   z-index: 11;
 }
 
-nav div button:first-child{
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.591);
-
+nav div button:first-child {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.591);
 }
 
 .hero {
@@ -67,17 +66,17 @@ nav div button:first-child{
   text-align: center;
 }
 
-.hero> :nth-child(1) {
+.hero > :nth-child(1) {
   font-weight: bolder;
   font-size: 48px;
 }
 
-.hero> :nth-child(2) {
+.hero > :nth-child(2) {
   font-weight: 500;
   font-size: 24px;
 }
 
-.hero> :nth-child(3) {
+.hero > :nth-child(3) {
   font-weight: 200;
   font-size: 20px;
 }
@@ -85,87 +84,300 @@ nav div button:first-child{
 .seperation {
   height: 8px;
   background-color: rgb(35, 36, 37);
+  margin-block: 100px;
+}
+.seperation1 {
+  height: 8px;
+  background-color: rgb(35, 36, 37);
 }
 
-.btn{
-    padding: 3px 8px;
-    font-weight: 400;
-    background-color: rgba(23, 23, 23, 0.3);
-    border: none;
-    border-radius: 4px;
-    padding: 5px 15px;
-    cursor: pointer;
-    margin: 4px;
+.btn {
+  padding: 3px 8px;
+  font-weight: 400;
+  background-color: rgba(23, 23, 23, 0.3);
+  border: none;
+  border-radius: 4px;
+  padding: 5px 15px;
+  cursor: pointer;
+  margin: 4px;
 }
 
-.btn-red{
-    color: white;
-    background-color: red;
-    padding: 10px 35px;
-    font-size: 20px;
-    border-radius: 4px;
-    font-weight: 700;
+.btn-red {
+  color: white;
+  background-color: red;
+  padding: 10px 35px;
+  font-size: 20px;
+  border-radius: 4px;
+  font-weight: 700;
 }
 
-.btn-red-sm{
-    color: white;
-    background-color: red;
+.btn-red-sm {
+  color: white;
+  background-color: red;
 }
 
-.main input{
-    padding: 10px 30px;
-    font-size: 16px;
-    border-radius: 4px;
-    background-color: rgba(23, 23, 23, 0.6);
-    border: none;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.591);
-    font-weight: 500;
+.main input {
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: rgba(23, 23, 23, 0.6);
+  border: none;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.591);
+  font-weight: 500;
 }
 
-.hero-btns{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+.hero-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.first{
-    display: flex;
-    justify-content: center;
-    max-width: 70vw;
-    color: white;
-    margin: auto;
-    align-items: center;
+.first {
+  display: flex;
+  justify-content: center;
+  max-width: 70vw;
+  color: white;
+  margin: auto;
+  align-items: center;
 }
 
-.SecImg{
-    position: relative;
+.SecImg {
+  position: relative;
 }
 
-.SecImg img{
-    width: 40vw;
-    position: relative;
-    z-index: 10;
+.SecImg img {
+  width: 555px;
+  position: relative;
+  z-index: 10;
 }
 
-.SecImg video{
-    position: absolute;
-    top: 95px;
-    left: 85px;
-    
+.SecImg video {
+  position: absolute;
+  top: 85px;
+  left: 75px;
+  width: 75%;
 }
 
-.first > div :first-child{
-    font-size: 48px;
-    font-weight: bolder;
+.first > div :first-child {
+  font-size: 48px;
+  font-weight: bolder;
 }
-.first > div :nth-child(2){
-    font-size: 24px;
-    font-weight: normal;
+.first > div :nth-child(2) {
+  font-size: 24px;
+  font-weight: normal;
 }
 
-.first > div{
-    display: flex;
+.first > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.third .SecImg video {
+  position: absolute;
+  top: 35px;
+  left: 110px;
+  width: 60%;
+}
+
+.faq {
+  background-color: black;
+  color: white;
+}
+
+.faq h2 {
+  text-align: center;
+  padding: 34px;
+  font-size: 48px;
+}
+
+.faq-box {
+  display: flex;
+  background-color: #2d2d2d;
+  padding: 26px;
+  justify-content: space-between;
+  max-width: 70vw;
+  margin: 14px auto;
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.5s ease-out;
+  color: white;
+}
+
+.faq-box:hover {
+  background-color: #414141;
+}
+
+.membership {
+  text-align: center;
+  margin: 40px auto 20px auto;
+  color: white;
+  padding: 20px;
+}
+
+.hero-btns input {
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: rgba(23, 23, 23, 0.6);
+  border: none;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.591);
+  font-weight: 500;
+}
+
+.sep-end {
+  margin: 100px 0px 50px 0px;
+}
+
+footer {
+  color: white;
+  width: 70vw;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  color: white;
+  gap: 23px;
+  padding: 34px;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+}
+
+footer span {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: white;
+  font-size: 17px;
+  transition: all 0.5s ease-out;
+  padding: 10px;
+}
+
+footer a:hover {
+  color: red;
+}
+
+.top-first {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1120px) {
+  .first {
     flex-direction: column;
+  }
 }
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 572px) {
+  .hero-btns {
+    flex-direction: column;
+  }
+
+  .SecImg img {
+    width: 300px;
+  }
+
+  .SecImg video {
+    top: 40px;
+    left: 40px;
+  }
+
+  .seperation {
+    margin-block: 50px;
+  }
+
+  nav img {
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav img {
+    width: 100px;
+  }
+  nav {
+    gap: 20px;
+    width: 90vw;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width:600px) {
+    .first > div :first-child {
+        font-size: 32px;
+        font-weight: bolder;
+      }
+      .first > div :nth-child(2) {
+        font-size: 18px;
+        font-weight: normal;
+      }
+
+      .hero > :nth-child(1) {
+        font-weight: bolder;
+        font-size: 32px;
+      }
+      
+      .hero > :nth-child(2) {
+        font-weight: 500;
+        font-size: 18px;
+      }
+      
+      .hero > :nth-child(3) {
+        font-weight: 200;
+        font-size: 18px;
+      }
+
+      .hero{
+        height: 80%;
+      }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f100;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
