@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  background-image: url(assets/images/bg.jpg);
+  height: 100vh;
+  background-position: center center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: max(100vw, 1200px);
+  background-size: cover;
+}
+
+.main .box {
+  height: 100vh;
+  width: 100%;
+  opacity: 0.69;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80vw;
+  margin: 0px auto;
+  height: 65px;
+}
+
+nav img {
+  width: 115px;
+  position: relative;
+  z-index: 11;
+}
+nav button {
+  position: relative;
+  z-index: 11;
+}
+
+nav div button:first-child{
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.591);
+
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  /* font-family: "Martel Sans", sans-serif; */
+  gap: 24px;
+  padding: 0px 30px;
+  text-align: center;
+}
+
+.hero> :nth-child(1) {
+  font-weight: bolder;
+  font-size: 48px;
+}
+
+.hero> :nth-child(2) {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.hero> :nth-child(3) {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.seperation {
+  height: 8px;
+  background-color: rgb(35, 36, 37);
+}
+
+.btn{
+    padding: 3px 8px;
+    font-weight: 400;
+    background-color: rgba(23, 23, 23, 0.3);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.btn-red{
+    color: white;
+    background-color: red;
+    padding: 10px 35px;
+    font-size: 20px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.btn-red-sm{
+    color: white;
+    background-color: red;
+}
+
+.main input{
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.6);
+    border: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.591);
+    font-weight: 500;
+}
+
+.hero-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.first{
+    display: flex;
+    justify-content: center;
+    max-width: 70vw;
+    color: white;
+    margin: auto;
+    align-items: center;
+}
+
+.SecImg{
+    position: relative;
+}
+
+.SecImg img{
+    width: 40vw;
+    position: relative;
+    z-index: 10;
+}
+
+.SecImg video{
+    position: absolute;
+    top: 95px;
+    left: 85px;
+    
+}
+
+.first > div :first-child{
+    font-size: 48px;
+    font-weight: bolder;
+}
+.first > div :nth-child(2){
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.first > div{
+    display: flex;
+    flex-direction: column;
+}
