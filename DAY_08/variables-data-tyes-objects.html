@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables Data types and Objects in JS</title>
+</head>
+
+<body>
+    <script>
+
+        // const var let
+
+        console.log('hello')
+
+        var d = 34;
+
+        let a = 5;
+        a = a + 1;
+        let b = 6;
+        let c = "harry";
+        let _a = 1;
+        // var 331a = 1;
+
+        console.log(a + b)
+        console.log(typeof (a))
+        console.log(typeof (b))
+        console.log(typeof (c))
+
+        const a1 = 6;
+        // a1 = a1+1;
+        // not allowed bcs const
+
+        {
+            let a = 66;
+            console.log(a);
+        }
+        console.log(a);
+
+
+        {
+            var d = 66;
+            console.log(d);
+        }
+        console.log(d);
+
+        // primitive types
+        let x = "lomash";
+        let y = 22;
+        let z = 3.55;
+        const p = true;
+        let q = undefined;
+        let r = null;
+
+        console.log(x,y,z,p,q,r);
+        console.log(typeof x,typeof y,typeof p,typeof z,typeof q,typeof r);
+
+        // objects
+
+        let obj = {
+            name: "lomash",
+            "job role": "developer"
+        }
+
+        console.log(obj);
+
+        obj.salary = 1000000;
+
+        console.log(obj);
+
+        obj.salary = 1100000;
+
+        console.log(obj);
+
+        obj.isgood = true;
+
+        console.log(obj);
+
+    </script>
+</body>
+
+</html>
