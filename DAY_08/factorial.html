@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial in JS</title>
+</head>
+
+<body>
+    <script>
+        console.log("Factorial Exercise")
+
+        let num = prompt("Enter Number : ")
+        // write a program to calculate factorial of a number using reduce and for loops
+
+        function fact_loop(num) {
+            let result = 1;
+            for (let i = num; i > 0; i--) {
+                result *= (i);
+            }
+            console.log("factorial from loop is: " + result)
+        }
+
+        function fact_reduce(num) {
+            let arr = []
+            for (let i = 0; i < num; i++) {
+                arr.push(num - i)
+            }
+
+            result = arr.reduce(factorial = (a, b) => {
+                return a * b
+            })
+
+            console.log("factorial from reduce is : " + result)
+        }
+
+        fact_loop(num)
+        fact_reduce(num)
+
+    </script>
+</body>
+
+</html>

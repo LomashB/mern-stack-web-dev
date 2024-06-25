@@ -1,1 +1,1 @@
-friend
+and
