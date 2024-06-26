@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Box - Exercise</title>
+    <style>
+        .container {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 23px;
+        }
+
+        .box {
+            height: 45px;
+            width: 45px;
+            border: 2px solid black;
+            padding: 2px;
+            margin: 2px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- given 5 boxes assign a random color and random backgrond using dom concepts -->
+    <div class="container">
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+    </div>
+
+    <script>
+
+
+        // my solution
+        boxes = document.getElementsByClassName('box')
+        console.log(boxes)
+        for (let i = 0; i < boxes.length; i++) {
+            rand_bg = "#" + Math.floor((Math.random() * 1000000) + 1);
+            rand_col = "#" + Math.floor((Math.random() * 1000000) + 1);
+
+            boxes[i].style.backgroundColor = rand_bg
+            boxes[i].style.color = rand_col
+
+        }
+
+
+
+        // solution 1
+        // let colors = ["red", "green", "Blue", "Brown", "black", "grey", "orange", "purple"]
+        // let box = document.querySelectorAll(".box")
+        // let size = colors.length
+
+        // box.forEach(element => {
+        //     let random = Math.floor(Math.random() * size)
+        //     element.style.color = colors[random]
+        // });
+        // box.forEach(element => {
+        //     let random = Math.floor(Math.random() * size)
+        //     element.style.backgroundColor = colors[random]
+        // });
+
+        // solution 2
+        // box = document.querySelectorAll(".box")
+        //     ; for (let i = 0; i < box.length; i++) {
+        //         cur_box = box[i];
+        //         rand_bg = "#" + Math.floor((Math.random() * 1000000) + 1);
+        //         cur_box.style.backgroundColor = rand_bg;
+        //     }
+
+
+    </script>
+</body>
+
+</html>
