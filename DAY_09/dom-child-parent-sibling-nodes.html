@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM child parent sibling nodes in JS</title>
+    <style>
+        .box {
+            height: 45px;
+            width: 56px;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+        <!-- comment -->
+    </div>
+    <table>
+        <thead>table</thead>
+        <tr>
+            <th>
+                head 1
+            </th>
+            <th>
+                head 2
+            </th>
+
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table>
+    <script>
+        console.log('hello!')
+        console.log(document.body.childNodes)
+        console.log(document.body.childNodes[0])
+        console.log(document.body.childNodes[1])
+
+        console.log(document.body.firstChild)
+        console.log(document.body.lastChild)
+
+        console.log(document.body.childNodes[1].childNodes)
+        console.log(document.body.childNodes[1].childNodes[1])
+
+
+        console.log(document.body.firstElementChild)
+        console.log(document.body.lastElementChild)
+
+        console.log(document.body.firstElementChild.lastElementChild.parentElement)
+
+        console.log(document.body.firstElementChild.childNodes)
+        console.log(document.body.firstElementChild.children)
+        console.log(document.body.firstElementChild.children[0])
+        console.log(document.body.firstElementChild.children[1])
+        console.log(document.body.firstElementChild.children[2])
+
+        console.log(document.body.firstElementChild.children[3].previousElementSibling)
+        console.log(document.body.firstElementChild.children[3].nextElementSibling)
+
+
+        console.log(document.body.children[1])
+        table = document.body.childern[1]
+
+    </script>
+</body>
+
+</html>

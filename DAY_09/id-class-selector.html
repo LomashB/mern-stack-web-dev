@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID and Class selectors in JS</title>
+    <style>
+        .box {
+            height: 59px;
+            width: 91px;
+            padding: 6px;
+            margin: 10px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Box1 Bhupendra Jogi 1</div>
+        <div class="box">Box2 Bhupendra Jogi 2</div>
+        <div class="box">Box2 Bhupendra Jogi 2.5</div>
+        <div class="box" id="green">Box3 Bhupendra Jogi 3 </div>
+        <div class="box">Box4 Bhupendra Jogi 4 </div>
+        <div class="box">Box5 Bhupendra Jogi 5 </div>
+        <!-- comment -->
+    </div>
+    <table>
+        <thead>table</thead>
+        <tr>
+            <th>head 1</th>
+            <th>head 2</th>
+
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table>
+
+    <script>
+        let bj = document.getElementsByClassName("box")
+
+        console.log(bj)
+
+        bj[2].style.backgroundColor = "red"
+
+        document.getElementById("green").style.backgroundColor = "green"
+
+        document.querySelector(".box").style.backgroundColor = "yellow"
+
+        console.log(document.querySelectorAll(".box"))
+
+
+        // arraow function
+        document.querySelectorAll(".box").forEach(e => {
+            console.log(e)
+            e.style.borderColor = "black"
+        })
+
+
+        //         // matches
+        //         e = document.getElementsByClassName("box")
+        // HTMLCollection(6) [div.box, div.box, div.box, div#green.box, div.box, div.box, green: div#green.box]
+        // e[4]
+        // <div class=​"box" style=​"border-color:​ black;​">​Box4 Bhupendra Jogi 4 ​</div>​
+        // e[4].matches(".green")
+        // false
+        // e[4].matches(".box")
+        // true
+
+        // // closest
+        // e[4].closest(".container")
+        // <div class=​"container">​…​</div>
+        // e[4].closest(".box")
+        // <div class=​"box" style=​"border-color:​ black;​">​Box4 Bhupendra Jogi 4 ​</div>
+        // e[4].closest("#green")
+        // null
+        // e[4].closest("#red")
+        // null
+        // e[4].closest("#green")
+        // null
+        // e[4].contains(".container")
+
+        // contains
+        // document.querySelector(".container").contains(document.querySelector(".box"))
+        // true
+        // document.querySelector(".box").contains(document.querySelector(".container"))
+        // false
+
+    </script>
+</body>
+
+</html>
