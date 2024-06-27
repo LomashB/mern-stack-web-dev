@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise in JS</title>
+</head>
+
+<body>
+    <script>
+        console.log('this is promises.')
+
+        let prom1 = new Promise((resolve, reject) => {
+
+            let a = Math.random();
+            if (a > 0.5) {
+                reject('promise was rejected 1')
+            }
+            else {
+                setTimeout(() => {
+                    console.log("yes i am done 1")
+                    resolve("harry1")
+                }, 3000);
+            }
+
+        })
+
+        // prom1.then((e) => {
+        //     console.log(e)
+        // }).catch((err) => {
+        //     console.log(err);
+        // })
+
+        let prom2 = new Promise((resolve, reject) => {
+
+            let a = Math.random();
+            if (a > 0.5) {
+                reject('promise was rejected 2')
+            }
+            else {
+                setTimeout(() => {
+                    console.log("yes i am done 2")
+                    resolve("harry2")
+                }, 1000);
+            }
+
+        })
+
+        // prom2.then((e) => {
+        //     console.log(e)
+        // }).catch((err) => {
+        //     console.log(err);
+
+        // })
+
+
+       
+
+        let p3 = Promise.resolve([prom1,prom2])
+
+        p3.then((a)=>{
+            console.log(a)
+        }).catch((err)=>{
+            console.log(err)
+        })
+
+    </script>
+</body>
+
+</html>

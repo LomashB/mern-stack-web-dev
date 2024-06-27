@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Functions</title>
+</head>
+
+<body>
+    <script>
+
+        console.log("lomash is hacker")
+        console.log("sneh is hacker")
+
+        setTimeout(() => {
+            console.log("i am inside set timeout 0s")
+        }, 0);
+
+        setTimeout(() => {
+            console.log("i am inside set timeout 2s")
+        }, 2000);
+
+        console.log("end is hacker")
+
+        const loadScript = (src, Callback) => {
+            let sc = document.createElement("script");
+            sc.src = src;
+            sc.onload = Callback("lomash")
+            document.head.append(sc)
+        }
+
+        const Callback = (arg) => {
+            console.log(arg)
+        }
+
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js",Callback)
+
+
+    </script>
+</body>
+
+</html>
