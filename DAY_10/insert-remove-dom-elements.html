@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inserting and Removing Dom elements</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container green red">
+        <div class="box" style="display: block" data-createdby="lomash" data-ideaby="sneh">
+            I am a box.
+        </div>
+        <div class="box">I am also box.</div>
+    </div>
+
+    <script>
+        // innerhtml
+        // document.querySelector('.container').innerHTML
+        // '\n        <div class="box">I am a box.</div>\n    '
+        // document.querySelector('.box').innerHTML
+        // 'I am a box.'
+
+        // innertext
+        // document.querySelector('.box').innerText
+        // 'I am a box.'
+        // document.querySelector('.container').innerText
+        // 'I am a box.'
+
+        // outerhtml
+        // document.querySelector('.box').outerHTML
+        // '<div class="box">I am a box.</div>'
+        // document.querySelector('.container').outerHTML
+        // '<div class="container">\n        <div class="box">I am a box.</div>\n    </div>'
+
+        //         document.querySelector('.container').hidden
+        // false
+        // document.querySelector('.container').hidden = true
+        // true
+
+        // has get set attributes
+        // document.querySelector(".box").hasAttribute("style")
+        // true
+        // document.querySelector(".box").getAttribute("style")
+        // 'display: block;'
+        // document.querySelector(".box").setAttribute("style", "display:flex;")
+        // undefined
+        // document.querySelector(".box").setAttribute("style", "display:flex")
+        // undefined
+        // document.querySelector(".box").attributes
+        // NamedNodeMap { 0: class, 1: style, class: class, style: style, length: 2 }
+
+        //   document.querySelector(".box").dataset
+        //     DOMStringMap { createdby: 'lomash', ideaby: 'sneh' }
+
+        // dynamic adding of element
+        let div = document.createElement("div");
+        div.innerHTML = "i have been inserted <b>lmsh</b>";
+        div.setAttribute("class", "created");
+        document.querySelector(".container").prepend(div);
+        document.querySelector(".container").append(div);
+        document.querySelector(".container").before(div);
+        document.querySelector(".container").after(div);
+
+        let cont = document.querySelector(".container");
+        cont.insertAdjacentHTML("beforeend", "hello i am under the water");
+        // beforeend afterend beforebegin afterbegin
+
+        // document.querySelector(".box").remove()
+        //   undefined;
+        //   document.querySelector(".box").remove();
+        //   undefined;
+        //   document.querySelector(".box").remove();
+
+
+        // classlist add remove
+
+        // document.querySelector('.container').cla
+        // undefined
+        // document.querySelector('.container').classList
+        // DOMTokenList(3)['container', 'green', 'red', value: 'container green red']
+        // document.querySelector('.container').className
+        // 'container green red'
+        // document.querySelector('.container').classList.add("yellow")
+        // undefined
+        // document.querySelector('.container').classList.remove("yellow")
+        // undefined
+        // document.querySelector('.container').classList.toggle("red")
+        // false
+        // document.querySelector('.container').classList.toggle("red")
+        // true
+
+    </script>
+</body>
+
+</html>
