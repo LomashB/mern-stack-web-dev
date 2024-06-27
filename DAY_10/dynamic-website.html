@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Website</title>
+    <style>
+
+        body{
+            background-color: black;
+            color: white;
+            
+        }
+        .card{
+            display: flex;
+            gap: 10px;
+        }
+
+        .div1{
+            width: 200px;
+            position: relative;
+
+        }
+
+        .div1 img{
+            width: 200px;
+            border-radius: 5px;
+        }
+
+        .divtime{
+            position: absolute;
+            right:  10px;
+            bottom: 10px;
+            background-color: rgba(128, 128, 128, 0.283);
+            z-index: 11;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .div2{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        .div21{
+            font-size: larger;
+        }
+
+        .div22{
+            font-size: small;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        function createCard(title, cName, views, monthsOld, duration, thumbnail) {
+            card = document.createElement("div");
+            card.setAttribute("class", "card");
+            document.querySelector(".container").append(card);
+
+            // let views = views;
+            let viewsnum = "";
+
+            if (views > 1000000000) {
+                views = views / 1000000000;
+                viewsnum = views + "B";
+            }
+
+            else if (views > 1000000) {
+                views = views / 1000000;
+                viewsnum = views + "M";
+            }
+
+            else if (views > 1000) {
+                views = views / 1000;
+                viewsnum = views + "K";
+            }
+            else {
+                viewsnum = views + "views";
+            }
+
+            div1 = document.createElement("div");
+            div1.setAttribute("class", "div1");
+            div1.innerHTML = `<img src="${thumbnail}">`;
+
+            divtime = document.createElement("div");
+            divtime.setAttribute("class", "divtime");
+            divtime.innerHTML = duration;
+
+            div2 = document.createElement("div");
+            div2.setAttribute("class", "div2");
+
+            div21 = document.createElement("div");
+            div21.setAttribute("class", "div21");
+            div21.innerHTML = title;
+
+
+            div22 = document.createElement("div");
+            div22.setAttribute("class", "div22");
+            div22.innerHTML = cName +" &nbsp&nbsp&nbsp "+ viewsnum +" &nbsp&nbsp&nbsp "+ monthsOld +"Monts Ago";
+
+            
+            card.append(div1)
+            card.append(div2)
+
+            div1.append(divtime)
+
+            div2.append(div21)
+            div2.append(div22)
+            
+        }
+
+        
+        createCard("Inroduction to Backend | video 1", "CodeWithME", 5600000, 7, "31:22", "https://picsum.photos/1600/900");
+
+    </script>
+
+</body>
+
+</html>

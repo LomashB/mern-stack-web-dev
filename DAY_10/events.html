@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JavaScript</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            hey i am a box.
+            
+        </div>
+    </div>
+
+    <button id="btn">
+        click me to change.
+    </button>
+
+    <script>
+        let button = document.getElementById("btn")
+
+        button.addEventListener("click", ()=>{
+            document.querySelector(".box").innerHTML = "yayyy! you were clicked enjoy your click."
+        })
+
+        button.addEventListener("dblclick", ()=>{
+            document.querySelector(".box").innerHTML = "yayyy! yo enjoy your click."
+        })
+
+        document.addEventListener("contextmenu", ()=>{
+            alert("dont hack us!!")
+        })
+
+        document.addEventListener("keydown", (e)=>{
+            console.log(e,e.key, e.code, e.keyCode)
+        })
+
+
+
+    </script>
+</body>
+</html>
