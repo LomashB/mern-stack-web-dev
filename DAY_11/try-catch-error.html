@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch Error catching</title>
+</head>
+<body>
+    <script>
+        console.log("error handling")
+
+        let a = prompt("Enter first number: ")
+        let b = prompt("Enter second number: ")
+
+        if(isNaN(a) || isNaN(b)){
+            throw SyntaxError("this is not alllowed.")
+        }
+
+        let sum = parseInt(a) + parseInt(b)
+        console.log("the sum is ",sum)
+        
+
+        try {
+        console.log("the sum is",sum*x)
+        } catch (error) {
+            console.log("error aagya bhai")
+            console.log(err.message);
+        }
+        finally{
+            console.log('files are closed and dbconnection is closed.')
+        }
+
+        try {
+            hey;
+        } catch (err) {
+            console.log(err);
+            console.log(err.name);
+            console.log(err.message);
+            console.log(err.stack);
+            
+        }
+
+
+        
+
+    </script>
+</body>
+</html>
