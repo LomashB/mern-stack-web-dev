@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object oriented programming in javascript </title>
+</head>
+<body>
+    <script>
+        // let obj ={
+        //     a:1,
+        //     b:"harry"
+        // }
+        // console.log(obj)
+        // console.log(obj.a)
+
+        // let animal = {
+        //     eats: true,
+        // }
+        
+        // let rabbit = {
+        //     jumps:true,
+        // }
+
+        // rabbit.__proto__ = animal
+        // set animal as a prototype of rabit
+            //  sets rabbit.[[prototype]] = animal
+
+
+        class Animal{
+            constructor(name){
+                this.name = name
+                console.log("object is created...")
+            }
+
+            eats(){
+                console.log("kha rha hai")
+            }
+
+            jumps(){
+                console.log("kood rha hai")
+            }
+        }
+
+        class Lion extends Animal {
+            constructor(name){
+                super(name)
+                console.log('object is LION!!!!!!');
+                
+            }
+        }
+
+        let l = new Lion("shera")
+        console.log(l)
+
+        let a = new Animal("bunny");
+        console.log(a)
+
+        console.log()
+
+        // getter setter
+        class user{
+
+            constructor(name){
+                this.name = name
+            }
+
+            get name(){
+                return this._name;
+            }
+
+            set name(value){
+                if(value.length < 4){
+                    alert('name is too short');
+                    return;
+                }
+                this._name = value;
+            }
+
+        }
+
+        let user1 = new user('sneh');
+        console.log(user.name)
+
+        user1.name = "lomash"
+        console.log(user1)
+        
+
+    </script>
+</body>
+</html>
