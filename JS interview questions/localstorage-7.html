@@ -27,21 +27,42 @@
 
         // store object via stringify and destore by parse
 
-        function saveNoteToLocalStorage(note){
-            localStorage.setItem("note",note)
+        // function saveNoteToLocalStorage(note){
+        //     localStorage.setItem("note",note)
+        // }
+
+        // document.querySelector("button").addEventListener("click",()=>{
+        //     let note = prompt("enter your note")
+        //     saveNoteToLocalStorage(note)
+        //     document.querySelector(".note").innerHTML = note
+
+        // })
+
+        // let notes = localStorage.getItem("note")
+        // if(note){
+        //     document.querySelector(".note").innerHTML = note
+        // }
+
+        // The Local Storage Manager:
+        // You are working on a note-taking app, and you want to implement a function named saveNoteToLocalStorage that takes a note object and saves it to the browser's local storage.
+
+        function saveNoteToLocalStorage(note) {
+
+            const noteKey = `note_${Date.now()}`;
+
+            const noteString = JSON.stringify(note);
+
+            localStorage.setItem(noteKey, noteString);
         }
 
-        document.querySelector("button").addEventListener("click",()=>{
-            let note = prompt("enter your note")
-            saveNoteToLocalStorage(note)
-            document.querySelector(".note").innerHTML = note
+        const note = {
+            title: "Meeting Notes",
+            content: "Discuss project updates and deadlines.",
+            date: new Date().toISOString()
+        };
 
-        })
+        saveNoteToLocalStorage(note);
 
-        let notes = localStorage.getItem("note")
-        if(note){
-            document.querySelector(".note").innerHTML = note
-        }
 
     </script>
 </body>

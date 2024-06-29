@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: black;
+    color: white; */
+  font-family: "myfont", "Times New Roman", Times, serif;
+}
+
+@font-face {
+  font-family: "myfont";
+  src: url("assets/fonts/GothamBold.ttf") format("truetype"),
+    url("assets/fonts/Gotham-Bold.otf") format("otf"); /* Safari, Android, iOS */
+}
+
+.left {
+  width: 25vw;
+  padding: 7px;
+}
+
+.right {
+  width: 75vw;
+}
+
+.home ul li {
+  width: 20px;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding-top: 13px;
+}
+
+.library-heading {
+  height: 25px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.library-heading div img{
+    width: 20px;
+    padding: 3px 10px;
+}
+
+.library-heading div {
+    display: flex;
+    align-items: center;
+}
