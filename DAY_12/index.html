@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spotify - Web Player : Music for everyone</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
 </head>
@@ -13,7 +14,7 @@
 
     <div class="container flex bg-black">
         <div class="left ">
-            <div class="home bg-grey rounded m-1 p-1">
+            <div class="home bg-grey rounded">
                 <div class="logo">
                     <img class="invert" src="assets/images/logo.svg" alt="Logo">
                 </div>
@@ -23,17 +24,134 @@
                     <li><img class="invert" src="assets/images/search.svg" alt="Search">Search</li>
                 </ul>
             </div>
-            <div class="library bg-grey rounded m-1 p-1">
+            <div class="library bg-grey rounded ">
                 <div class="library-heading">
-                    <div class="flex align-center"> <img class="invert" src="assets/images/library.svg" alt="library"> Your Library</div>
+                    <div class="flex align-center"> <img class="invert" src="assets/images/library.svg" alt="library">
+                        Your Library</div>
                     <img class="invert" width="15px" src="assets/images/plus.svg" alt="">
                 </div>
-                
+
+                <div class="footer ">
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/" data-encore-id="textLink">
+                            <span data-encore-id="type">Legal</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/in-en/safetyandprivacy/" data-encore-id="textLink">
+                            <span data-encore-id="type">Safety & Privacy Center</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/" data-encore-id="textLink">
+                            <span data-encore-id="type">Privacy Policy</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/cookies-policy/" data-encore-id="textLink">
+                            <span data-encore-id="type">Cookies</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" data-encore-id="textLink">
+                            <span data-encore-id="type">About Ads</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/in-en/accessibility/" data-encore-id="textLink">
+                            <span data-encore-id="type">Accessibility</span>
+                        </a>
+                    </div>
+
+                    <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener">
+                        <span data-encore-id="text">Cookies</span>
+                    </a>
+                </div>
+
             </div>
         </div>
-        <div class="right border">
-            lorem
+
+
+        <div class="right rounded  bg-grey">
+
+            <div class="header rounded">
+                <div class="nav">
+                    <img src="assets/images/left.svg" alt="">
+                    <img src="assets/images/right.svg" alt="">
+                </div>
+                <div class="buttons">
+                    <button class="signUpBtn">Sign Up</button>
+                    <button class="logInBtn">Log In</button>
+                </div>
+            </div>
+
+            <div class="spotifyPlaylists">
+                <div class="playlistTitle">
+                    <h1>Popular Albums</h1>
+                    <p>Show all</p>
+                </div>
+
+                <div class="cardContainer">
+
+                    <div class="card">
+
+                        <img src="assets/images/img1.jpeg" alt="">
+                        <div class="play">
+                            <img src="assets/images/play.svg" alt="">
+                        </div>
+                        <h2>Ek Tha Raja</h2>
+                        <p>Baadshah</p>
+                    </div>
+
+                    <div class="card">
+
+                        <img src="assets/images/img1.jpeg" alt="">
+                        <div class="play">
+                            <img src="assets/images/play.svg" alt="">
+                        </div>
+                        <h2>Ek Tha Raja</h2>
+                        <p>Baadshah</p>
+                    </div>
+
+                    <div class="card">
+
+                        <img src="assets/images/img1.jpeg" alt="">
+                        <div class="play">
+                            <img src="assets/images/play.svg" alt="">
+                        </div>
+                        <h2>Ek Tha Raja</h2>
+                        <p>Baadshah</p>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="playbar">
+
+                    <div class="songInfo">
+
+                    </div>
+
+                    <div class="songButtons">
+                        <img src="assets/images/previous-song.svg" alt="Previous song">
+                        <img src="assets/images/play (2).svg" alt="Play song">
+                        <img src="assets/images/next-song.svg" alt="Next song">
+                    </div>
+
+                    <div class="songTime">
+
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
+
+
+
     </div>
 
 

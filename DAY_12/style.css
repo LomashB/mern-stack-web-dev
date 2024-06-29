@@ -4,24 +4,35 @@
 }
 
 body {
-  /* background-color: black;
-    color: white; */
+  background-color: black;
+  color: white;
   font-family: "myfont", "Times New Roman", Times, serif;
 }
 
 @font-face {
   font-family: "myfont";
   src: url("assets/fonts/GothamBold.ttf") format("truetype"),
-    url("assets/fonts/Gotham-Bold.otf") format("otf"); /* Safari, Android, iOS */
+    url("assets/fonts/Gotham-Bold.otf") format("otf"),
+    url("assets/fonts/Gotham-Light.otf") format("otf"); /* Safari, Android, iOS */
 }
 
 .left {
   width: 25vw;
-  padding: 7px;
+  padding: 12px;
 }
 
 .right {
   width: 75vw;
+  margin: 16px 10px;
+  margin-right: 20px;
+  position: relative;
+
+}
+
+.logo img {
+  width: 50%;
+  display: flex;
+  margin: 20px auto;
 }
 
 .home ul li {
@@ -30,22 +41,231 @@ body {
   display: flex;
   gap: 15px;
   padding-top: 13px;
+  color: grey;
+}
+
+.home ul li:hover{
+  color: #a7a7a7;
+  text-decoration: underline;
+}
+
+.home {
+  padding: 20px;
+  margin: 10px;
+  font-size: 30px;
+}
+
+.library {
+  padding: 20px;
+  margin: 10px;
+  margin-top: 20px;
 }
 
 .library-heading {
-  height: 25px;
+  height: 35px;
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: space-between;
+  font-size: 25px;
 }
 
-.library-heading div img{
-    width: 20px;
-    padding: 3px 10px;
+.library-heading div img {
+  width: 35px;
+  padding: 3px 10px;
 }
 
 .library-heading div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
+
+.footer {
+  display: flex;
+  font-size: 15px;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-block: 30px;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+
+.footer a {
+  color: grey;
+  text-decoration: none;
+  transition: all 0.1s ease-in;
+}
+
+.footer a:hover{
+  color: #a7a7a7;
+  text-decoration: underline;
+}
+
+.library {
+  min-height: 66vh;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(34, 34, 34);
+  align-items: center;
+  position: sticky;
+  right: 8px;
+  top: 0px;
+  z-index: 11;
+}
+
+.nav {
+  padding: 20px;
+}
+
+.nav img {
+  background-color: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.buttons {
+  padding: 20px;
+  gap: 20px;
+}
+
+.signUpBtn {
+  border: none;
+  padding: 10px 20px;
+
+  background: none;
+  color: #a7a7a7;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px 12px;
+  font-family: "myfont", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  transition: all 0.1s ease-in;
+}
+
+.signUpBtn:hover {
+  transform: scale(1.2);
+  columns: white;
+  cursor: pointer;
+}
+
+.logInBtn {
+  background-color: #a7a7a7;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0px 12px;
+  font-family: "myfont", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  transition: all 0.1s ease-in;
+
+}
+
+.logInBtn:hover {
+  transform: scale(1.2);
+  columns: white;
+  cursor: pointer;
+}
+
+
+.nav img {
+  width: 20px;
+}
+
+.spotifyPlaylists {
+  margin: 20px;
+}
+
+.playlistTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playlistTitle p {
+  color: #a7a7a7;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 10px;
+  max-height: 74vh;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+.card {
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+  padding: 11px;
+}
+
+.card p{
+  color: #a7a7a7;
+}
+
+.card:hover .play img {
+  top: 52%;
+  opacity: 1;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: #212121;
+}
+
+.card > * {
+  padding-top: 5px;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.play img {
+  background-color: #1fdf64;
+  padding: 5%;
+  border-radius: 100%;
+  position: absolute;
+  top: 74%;
+  right: 20px;
+  width: 15%;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+
+
+.playbar{
+  position: absolute;
+  bottom: 0;
+  background-color: #212121;
+  width: calc(100% - 40px);
+  margin: 0px -20px;
+  border-radius: 10px;
+  padding: 30px 20px;
+  
+}
+
+.songButtons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.songButtons img{
+}
+
