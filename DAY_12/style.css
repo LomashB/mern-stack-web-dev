@@ -82,6 +82,7 @@ body {
 
 .footer {
   display: flex;
+  justify-content: start;
   font-size: 15px;
   flex-wrap: wrap;
   gap: 13px;
@@ -104,6 +105,7 @@ body {
 
 .library {
   min-height: 66vh;
+  height: auto;
   position: relative;
 }
 
@@ -266,6 +268,19 @@ body {
   gap: 20px;
 }
 
-.songButtons img{
+.songList{
+  height: 35vh;
+  overflow-y: scroll;
+  margin-block: 20px;
 }
 
+.songList ul {
+  padding: 0 12px;
+  margin: 40px 0px;
+}
+
+.songList ul li{
+  list-style: none;
+  width: 100%;
+  margin:  5px;
+}
