@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Web Player : Music for everyone</title>
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/utility.css">
 </head>
 
 <body>
@@ -122,45 +122,45 @@
 
                 <div class="cardContainer">
 
-                    <div class="card">
+                    <!-- <div data-folder="hiphop" class="card">
 
                         <img src="assets/images/img1.jpeg" alt="">
-                        <div class="play">
+                        <div  class="play">
                             <img src="assets/images/play-filled.svg" alt="">
                         </div>
                         <h2>Ek Tha Raja</h2>
                         <p>Baadshah</p>
                     </div>
 
-                    <div class="card">
+                    <div data-folder="melody" class="card">
 
                         <img src="assets/images/img1.jpeg" alt="">
-                        <div class="play">
+                        <div   class="play">
                             <img src="assets/images/play-filled.svg" alt="">
                         </div>
                         <h2>Ek Tha Raja</h2>
                         <p>Baadshah</p>
                     </div>
 
-                    <div class="card">
+                    <div data-folder="bollywood" class="card">
 
                         <img src="assets/images/img1.jpeg" alt="">
-                        <div class="play">
+                        <div   class="play">
                             <img src="assets/images/play-filled.svg" alt="">
                         </div>
                         <h2>Ek Tha Raja</h2>
                         <p>Baadshah</p>
                     </div>
 
-                    <div class="card">
+                    <div data-folder="hiphop" class="card">
 
                         <img src="assets/images/img1.jpeg" alt="">
-                        <div class="play">
+                        <div   class="play">
                             <img src="assets/images/play-filled.svg" alt="">
                         </div>
                         <h2>Ek Tha Raja</h2>
                         <p>Baadshah</p>
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -181,10 +181,21 @@
                             <img id="next"  width="35px"    src="assets/images/next-song.svg" alt="Next song">
                         </div>
                         
-                        <div class="songTime">
-                            
-                        </div>
                         
+
+                        <div class="songVolume">
+
+                            <div class="songTime">
+                                
+                            </div>
+                            <div class="volume">
+                                <img src="assets/images/volume.svg" alt="">
+                                <div class="range">
+                                    <input type="range" name="volume" id="volume">
+                                </div>
+                            </div>
+                        </div>
+                            
                     </div>
 
                     <div class="seekbar">
@@ -205,7 +216,7 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

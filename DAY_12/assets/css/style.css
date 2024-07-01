@@ -11,9 +11,9 @@ body {
 
 @font-face {
   font-family: "myfont";
-  src: url("assets/fonts/GothamBold.ttf") format("truetype"),
-    url("assets/fonts/Gotham-Bold.otf") format("otf"),
-    url("assets/fonts/Gotham-Light.otf") format("otf"); /* Safari, Android, iOS */
+  src: url("../fonts/GothamBold.ttf") format("truetype"),
+    url("../fonts/Gotham-Bold.otf") format("otf"),
+    url("../fonts/Gotham-Light.otf") format("otf"); /* Safari, Android, iOS */
 }
 
 .container {
@@ -208,7 +208,7 @@ body {
   gap: 10px;
   flex-wrap: wrap;
   margin: 10px;
-  max-height: 60vh;
+  max-height: 55vh;
   overflow-x: auto;
   overflow-y: auto;
 }
@@ -378,10 +378,31 @@ body {
   width: 30%;
   text-align: center;
 }
-.songTime {
+.songVolume {
   width: 30%;
   text-align: end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  
 }
+
+.volume{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.volume img{
+  cursor: pointer;
+}
+
+.range input{
+  cursor: pointer;
+}
+
+
 
 .hamburger {
   display: none;
@@ -399,6 +420,8 @@ body {
     transition: all 0.3s ease-in-out;
     z-index: 2;
     width: 50vw;
+    position: fixed;
+    height: 100vh;
   }
 
   .right {
@@ -409,6 +432,9 @@ body {
 
   .playbar {
     width: 96vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: auto;
   }
 
@@ -453,6 +479,10 @@ body {
     margin: 20px auto;
     width: 90%;
   }
+
+  .songVolume{
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -487,9 +517,8 @@ body {
   .songButtons {
     width: 45%;
     margin: auto;
-    text-align: justify;
   }
-  .songTime {
+    .songVolume {
     width: 45%;
     margin: auto;
     text-align: center;
@@ -512,19 +541,61 @@ body {
     justify-content: center;
   }
 
+ 
+
   
 }
 
+@media screen and (max-width:450px) {
+  .buttons {
+    display: flex;
+    /* flex-direction: column; */
+    /* width: auto; */
+    align-items: end;
+    /* justify-content: end; */
+    padding: 5px 10px;
+    gap: unset;
+  }
+
+  .logInBtn{
+    margin: 0;
+  }
+  .signUpBtn{
+    margin: 0;
+  }
+
+  .nav{
+    padding: 10px;
+  }
+
+  .buttons{
+    /* padding: 5px; */
+  }
+
+  .header{
+    padding: 2px;
+  }
+}
+
 @media screen and (max-width: 400px) {
+
+  .card {
+    width: 70vw;
+  }
+
   .songButtons {
     width: 85%;
     margin: auto;
     text-align: center;
   }
-  .songTime {
+  .songVolume {
     width: 85%;
     margin: auto;
     text-align: center;
+  }
+
+  .songVolume{
+    flex-direction: row;
   }
 }
 
@@ -542,10 +613,5 @@ body {
   .card {
     width: 70vw;
   }
-
-  .header {
-    flex-direction: column;
-  }
-
   
 }
