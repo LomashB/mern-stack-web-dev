@@ -3,6 +3,18 @@ let songs;
 
 let currFolder;
 
+function secondsToMinutesSeconds(totalSeconds) {
+  const minutes = Math.floor(totalSeconds / 6)
+  const seconds = Math.floor(totalSeconds % 60);
+  const paddedSeconds = seconds.toString().padStart(2, "0");
+
+  if (isNaN(seconds) || seconds < 0) {
+    return "00:00";
+  }
+  return `${minutes}:${paddedSeconds}`;
+}
+
+
 async function getSongs(folder) {
   currFolder = folder;
   let url = `http://192.168.150.237:3000/DAY_12/assets/songs/${folder}`;
@@ -14,7 +26,7 @@ async function getSongs(folder) {
   div.innerHTML = response;
   let as = div.getElementsByTagName("a");
 
-  let songs = [];
+  songs = [];
 
   for (let index = 0; index < as.length; index++) {
     const element = as[index];
@@ -23,8 +35,6 @@ async function getSongs(folder) {
     }
   }
 
-  // play the first songs
-  playMusic(songs[0], true);
 
   // show all the songs in the playlists
   let songUL = document
@@ -59,23 +69,12 @@ async function getSongs(folder) {
     });
   });
 
-  // attach event listener to next play previous
-
-  play.addEventListener("click", () => {
-    if (currentSong.paused) {
-      currentSong.play();
-      play.src = "assets/images/pause.svg";
-    } else {
-      currentSong.pause();
-      play.src = "assets/images/play.svg";
-    }
-  });
+ 
 
   return songs;
 }
 
 const playMusic = (track, pause = false) => {
-  // let audio = new Audio("/DAY_12/assets/songs/"+track)
   currentSong.src = `/DAY_12/assets/songs/${currFolder}/` + track;
   if (!pause) {
     currentSong.play();
@@ -85,32 +84,15 @@ const playMusic = (track, pause = false) => {
   document.querySelector(".songTime").innerHTML = "00:00 / 00:00";
 };
 
-function secondsToMinutesSeconds(totalSeconds) {
-  // Calculate minutes
-  const minutes = Math.floor(totalSeconds / 60);
-
-  // Calculate remaining seconds and round down to the nearest integer
-  const seconds = Math.floor(totalSeconds % 60);
-
-  // Ensure seconds are always two digits
-  const paddedSeconds = seconds.toString().padStart(2, "0");
-
-  if (isNaN(seconds) || seconds < 0) {
-    return "00:00";
-  }
-
-  // Format as minutes:seconds
-  return `${minutes}:${paddedSeconds}`;
-}
 
 async function displayAlbums() {
   let url = `http://192.168.150.237:3000/DAY_12/assets/songs`;
   let a = await fetch(url);
-  let cardContainer = document.querySelector(".cardContainer");
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
   let anchors = div.getElementsByTagName("a");
+  let cardContainer = document.querySelector(".cardContainer");
   let array = Array.from(anchors);
   for (let index = 0; index < array.length; index++) {
     const e = array[index];
@@ -140,17 +122,30 @@ async function displayAlbums() {
   Array.from(document.getElementsByClassName("card")).forEach((e) => {
     e.addEventListener("click", async (item) => {
       songs = await getSongs(item.currentTarget.dataset.folder);
-      // playMusic(songs[0])
+      playMusic(songs[0])
     });
   });
 }
 
 async function main() {
   // display all the albums on the page
-  displayAlbums();
-
-  // get the list of all songs
   await getSongs("hiphop");
+  playMusic(songs[0],true)
+  
+  // get the list of all songs
+  await displayAlbums();
+
+   // attach event listener to next play previous
+
+   play.addEventListener("click", () => {
+    if (currentSong.paused) {
+      currentSong.play();
+      play.src = "assets/images/pause.svg";
+    } else {
+      currentSong.pause();
+      play.src = "assets/images/play.svg";
+    }
+  });
 
   // listen for time update event
 
