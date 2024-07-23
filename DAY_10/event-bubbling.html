@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Bubbling</title>
     <style>
-        .child{
+        .child {
             background-color: aquamarine;
             border: 2px solid black;
             padding: 34px;
@@ -14,17 +14,17 @@
             cursor: pointer;
         }
 
-        .childContainer{
-            background-color:beige;
+        .childContainer {
+            background-color: beige;
             border: 2px solid black;
             padding: 34px;
             margin: 34px;
         }
 
-        .container{
+        .container {
             padding: 34px;
             margin: 34px;
-            background-color:blanchedalmond;
+            background-color: blanchedalmond;
             border: 2px solid black;
         }
     </style>
@@ -54,24 +54,24 @@
         })
 
 
-    
 
-        let a = setInterval(()=>{
+
+        let a = setInterval(() => {
             document.querySelector(".childContainer").style.background = getRandomColor()
             document.querySelector(".container").style.background = getRandomColor()
             document.querySelector(".child").style.background = getRandomColor()
-        },300)
+        }, 300)
 
-        let ad = setTimeout(()=>{
+        let ad = setTimeout(() => {
             document.querySelector("body").style.background = getRandomColor()
-        },3000)
+        }, 3000)
 
         console.log(a)
 
-        function getRandomColor(){
-            let val1 = Math.ceil(0 + Math.random()*255);
-            let val2 = Math.ceil(0 + Math.random()*255);
-            let val3 = Math.ceil(0 + Math.random()*255);
+        function getRandomColor() {
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
 
 
             return `rgb(${val1}, ${val2}, ${val3})`
