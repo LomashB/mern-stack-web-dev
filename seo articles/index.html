@@ -60,21 +60,38 @@
     <script>
         document.getElementById('uploadForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            const formData = new FormData();
-            formData.append('file', document.getElementById('fileInput').files[0]);
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            
+            if (file) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    const base64File = e.target.result.split(',')[1]; // Remove the data URL part
+                    const jsonPayload = JSON.stringify({ file: base64File, fileName: file.name });
 
-            fetch('https://lmsh.app.n8n.cloud/webhook-test/article-parser', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('responseMessage').innerText = 'File uploaded successfully!';
-            })
-            .catch(error => {
-                document.getElementById('responseMessage').innerText = 'Error uploading file.';
-                console.error('Error:', error);
-            });
+                    fetch('YOUR_N8N_WEBHOOK_URL', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: jsonPayload
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('responseMessage').innerText = 'File uploaded successfully!';
+                    })
+                    .catch(error => {
+                        document.getElementById('responseMessage').innerText = 'Error uploading file.';
+                        console.error('Error:', error);
+                    });
+                };
+
+                reader.readAsDataURL(file); // Convert the file to Base64
+            } else {
+                document.getElementById('responseMessage').innerText = 'Please select a file.';
+            }
         });
     </script>
 </body>
