@@ -70,7 +70,7 @@
                     const base64File = e.target.result.split(',')[1]; // Remove the data URL part
                     const jsonPayload = JSON.stringify({ file: base64File, fileName: file.name });
 
-                    fetch('YOUR_N8N_WEBHOOK_URL', {
+                    fetch('https://lmsh.app.n8n.cloud/webhook-test/article-parser', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
